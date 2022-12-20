@@ -5,7 +5,6 @@
 <%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %>
 
 
-
 <petclinic:layout pageName="products">
     <h2>
         <c:if test="${product['new']}">New </c:if> Product

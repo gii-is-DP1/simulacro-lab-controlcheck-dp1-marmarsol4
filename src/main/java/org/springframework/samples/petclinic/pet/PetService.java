@@ -37,7 +37,6 @@ public class PetService {
 	
 	private VisitRepository visitRepository;
 	
-
 	@Autowired
 	public PetService(PetRepository petRepository,
 			VisitRepository visitRepository) {
@@ -72,6 +71,10 @@ public class PetService {
 
 	public Collection<Visit> findVisitsByPetId(int petId) {
 		return visitRepository.findByPetId(petId);
+	}
+
+	public Collection<Pet> getAllPets() { // Lo he hecho yo
+		return petRepository.findAll();
 	}
 
 }

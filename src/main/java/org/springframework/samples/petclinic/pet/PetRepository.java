@@ -30,6 +30,9 @@ import org.springframework.samples.petclinic.model.BaseEntity;
  */
 public interface PetRepository extends Repository<Pet, Integer> {
 
+	@Query("SELECT p from Pet p")
+	List<Pet> findAll();
+	
 	/**
 	 * Retrieve all <code>PetType</code>s from the data store.
 	 * @return a <code>Collection</code> of <code>PetType</code>s

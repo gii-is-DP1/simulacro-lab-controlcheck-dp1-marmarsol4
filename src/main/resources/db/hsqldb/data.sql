@@ -62,8 +62,7 @@ INSERT INTO visits(id,pet_id,visit_date,description) VALUES (2, 8, '2013-01-02',
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (3, 8, '2013-01-03', 'neutered');
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (4, 7, '2013-01-04', 'spayed');
 
--- Simulacro
--- Al meter , product_type_id falla
+-- Producto
 
 INSERT INTO product_types(id, name) VALUES(1, 'Accessories'); -- Estos van primero, me hacen falta en product
 INSERT INTO product_types(id, name) VALUES(2, 'Food');
@@ -71,9 +70,10 @@ INSERT INTO product_types(id, name) VALUES(2, 'Food');
 INSERT INTO products(id, name, price, product_type_id) VALUES(1, 'Wonderful dog collar', 17.25, 1);
 INSERT INTO products(id, name, price, product_type_id) VALUES(2, 'Super Kitty Cookies', 50.0, 2);
 
+-- Feeding - Los types antes que los feedings!
 
+INSERT INTO feeding_types(id, name, description, pet_type_id) VALUES(1, 'High Protein Puppy Food', 'description1', 2);
+INSERT INTO feeding_types(id, name, description, pet_type_id) VALUES(2, 'Adult Weight Management', 'description2', 1);
 
-
-
-
- 
+INSERT INTO feedings(id, start_date, weeks_duration, pet_id, feeding_type_id) VALUES(1, '2022-01-05', 7.5, 7, 2);
+INSERT INTO feedings(id, start_date, weeks_duration, pet_id, feeding_type_id) VALUES(2, '2022-01-04', 6, 4, 1);

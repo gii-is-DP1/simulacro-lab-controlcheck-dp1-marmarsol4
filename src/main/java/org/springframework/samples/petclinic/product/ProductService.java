@@ -22,18 +22,22 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+	@Transactional
     public List<Product> getProductsCheaperThan(double price) {
         return productRepository.findByPriceLessThan(price); //Metodo nuevo en el repo
     }
 
+	@Transactional
     public ProductType getProductType(String typeName) {
         return productRepository.findProductType(typeName); // Usar metodo del repo
     }
 
+	@Transactional
     public Product save(Product p){
-        return null;       
+        return productRepository.save(p);       
     }
 
+	@Transactional
 	public List<ProductType> findAllProductTypes() {
 		return productRepository.findAllProductTypes();
 	}
