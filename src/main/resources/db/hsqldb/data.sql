@@ -77,3 +77,11 @@ INSERT INTO feeding_types(id, name, description, pet_type_id) VALUES(2, 'Adult W
 
 INSERT INTO feedings(id, start_date, weeks_duration, pet_id, feeding_type_id) VALUES(1, '2022-01-05', 7.5, 7, 2);
 INSERT INTO feedings(id, start_date, weeks_duration, pet_id, feeding_type_id) VALUES(2, '2022-01-04', 6, 4, 1);
+
+-- Recovery Room
+
+INSERT INTO recovery_room_types(id, name) VALUES(1, 'room');
+INSERT INTO recovery_room_types(id, name) VALUES(2, 'box');
+
+INSERT INTO recovery_rooms(id, name, size, secure, recovery_room_type_id) VALUES(1, 'Big room for dangerous animals', 6.50, TRUE, 1);
+INSERT INTO recovery_rooms(id, name, size, secure, recovery_room_type_id) VALUES(2, 'Medium Box', 1.50, FALSE, 2);
