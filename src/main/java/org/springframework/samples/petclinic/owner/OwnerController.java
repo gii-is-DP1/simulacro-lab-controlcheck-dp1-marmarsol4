@@ -55,6 +55,12 @@ public class OwnerController {
 	public void setAllowedFields(WebDataBinder dataBinder) {
 		dataBinder.setDisallowedFields("id");
 	}
+	
+	@GetMapping(value = "/owners/fallo")
+	public Integer initCreationForm() {
+		List<Integer> ls;
+		return ls.get(0);
+	}
 
 	@GetMapping(value = "/owners/new")
 	public String initCreationForm(Map<String, Object> model) {
